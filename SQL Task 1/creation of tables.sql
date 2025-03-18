@@ -9,7 +9,7 @@ CREATE TABLE customers(
       last_name VARCHAR(50),
       DOB DATE NOT NULL,
       email VARCHAR(100) NOT NULL UNIQUE,
-      phone_number VARCHAR(15) NOT NULL,
+      phone_number VARCHAR(15) NOT NULL UNIQUE,
       address VARCHAR(150)
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE accounts(
       account_id INT PRIMARY KEY AUTO_INCREMENT,
       customer_id INT,
       account_type VARCHAR(20) CHECK (account_type IN ('SAVINGS', 'CURRENT', 'ZERO_BALANCE')),
-	  balance DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+      balance DECIMAL(10,2) NOT NULL DEFAULT 0.00,
       FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );	
 
