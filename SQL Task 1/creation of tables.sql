@@ -25,11 +25,11 @@ CREATE TABLE accounts(
 -- to create the transactions table
 CREATE TABLE transactions(
       transaction_id INT PRIMARY KEY AUTO_INCREMENT,
-	  account_id INT,
-	  transaction_type VARCHAR(20) CHECK (transaction_type IN ('DEPOSIT', 'WITHDRAWAL', 'TRANSFER')),
-	  amount DECIMAL(10,2) NOT NULL,
+      account_id INT,
+      transaction_type VARCHAR(20) CHECK (transaction_type IN ('DEPOSIT', 'WITHDRAWAL', 'TRANSFER')),
+      amount DECIMAL(10,2) NOT NULL CHECK (amount > 0),
       transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-     FOREIGN KEY (account_id) REFERENCES accounts(account_id) ON DELETE CASCADE
+      FOREIGN KEY (account_id) REFERENCES accounts(account_id) ON DELETE CASCADE
 );
 
 -- to show all tables in database
