@@ -7,7 +7,7 @@ public class ATMTransaction {
         System.out.print("Please Enter Your Current Balance: $ ");
         double currentBalance = sc.nextDouble();
 
-        while (true) { // Infinite loop to keep showing the menu
+        while (true) { 
             System.out.println("\n ******* WELCOME TO BANK OF BARODA ATM TRANSACTION *******\n");
             System.out.println("1. Withdraw Cash");
             System.out.println("2. Deposit Cash");
@@ -19,7 +19,7 @@ public class ATMTransaction {
             
             switch (choice) {
                 case 1: // Withdraw Cash
-                    while (true) { // Keep asking until valid input
+                    while (true) { 
                         System.out.print("Please Enter Amount to Withdraw (Multiples of 100 or 500): $ ");
                         double withdrawAmount = sc.nextDouble();
 
@@ -32,13 +32,13 @@ public class ATMTransaction {
                             System.out.println("..\nProcessing Your Transaction...\n..");
                             System.out.println("Please Collect Your Cash: $ " + withdrawAmount);
                             System.out.println("Your Available Current Balance is: $ " + currentBalance);
-                            break; // Exit withdrawal loop
+                            break; 
                         }
                     }
                     break;
 
                 case 2: // Deposit Cash
-                    while (true) { // Keep asking until a valid amount is entered
+                    while (true) { 
                         System.out.print("Please Enter the Amount to Deposit: $ ");
                         double depositAmount = sc.nextDouble();
 
@@ -47,7 +47,7 @@ public class ATMTransaction {
                             System.out.println("..\nProcessing Your Transaction...\n..");
                             System.out.println("Your Amount has been Deposited Successfully: $ " + depositAmount);
                             System.out.println("Your Available Current Balance is: $ " + currentBalance);
-                            break; // Exit deposit loop
+                            break; 
                         } else {
                             System.out.println("Invalid Deposit Amount. Please Enter a Positive Value.");
                         }
