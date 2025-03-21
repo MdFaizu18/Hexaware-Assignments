@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// To check the loan eligibility with the credit score and annual income of the customer
 public class LoanEligibility {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
