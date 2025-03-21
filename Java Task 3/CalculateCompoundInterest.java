@@ -4,12 +4,14 @@ public class CalculateCompoundInterest {
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
+    //To enter the no of cutomers (to loop till that)
     System.out.print("\nEnter the No of Customers: ");
     int numberOfCustomers = sc.nextInt();
 
     for(int i =0;i<numberOfCustomers;i++){
         System.out.println("\nCustomer " + (i+1) + ": ");
 
+        //To enter the initial balance
         System.out.print("Please Enter the Initial Balance: $ ");
         double initialBalance = sc.nextDouble();
         if(initialBalance <=0){
@@ -17,6 +19,7 @@ public static void main(String[] args) {
             System.exit(0);
         }
 
+        //To enter the annual interest rate
         System.out.print("Please Enter Annual Interest Rate: % ");
         double annualInterestRate = sc.nextDouble();
         if(annualInterestRate <=0){
@@ -24,6 +27,7 @@ public static void main(String[] args) {
             System.exit(0);
         }
 
+        //To enter the no of years
         System.out.print("Please Enter the Number of Years: ");
         int numberOfYears = sc.nextInt();
         if(numberOfYears <=0){
