@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class ATMTransaction {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
+        // To enter the number of cutomers ( will loop till that )
         System.out.print("Please Enter Your Current Balance: $ ");
         double currentBalance = sc.nextDouble();
 
