@@ -35,6 +35,7 @@ public static void main(String[] args) {
             System.exit(0);
         }
 
+        //Calculating future balance using given formula
         double futureBalance  = initialBalance * Math.pow((1 + annualInterestRate/100),numberOfYears);
         System.out.printf("Future Balance after %d years: $ %.2f\n", numberOfYears, futureBalance);
     }
