@@ -4,13 +4,13 @@ public class BalanceChecker{
     public static void main (String[] args){
        Scanner sc = new Scanner(System.in);
 
+        // Predefine account No and Balances
        int accountNumbers[] = {1111,2222,3333,4444,5555};
        double balances[] = {1050.50,2010.00,1500.00,500.00,1000.00};
 
        System.out.println("Welcome to the BOB ATM Balance Checker");
 
        do {
-
         System.out.print("\nPlease enter your account number: ");
         int customerAccountNumber = sc.nextInt();
         boolean accountFound = false;
@@ -23,6 +23,7 @@ public class BalanceChecker{
                 System.exit(0);
             }
         }
+        // If accountFound is false then it will print this 
         if(!accountFound){
             System.out.println("Account not found. Please try again.");
         }
