@@ -11,10 +11,12 @@ public class PasswordValidation {
             String password = sc.nextLine();
             boolean isValid = true;
 
+            // To check password is minimum of 8 char length
             if (password.length() < 8) {
                 System.out.println("Password must be at least 8 characters long.");
                 isValid = false;
             }
+            // To check Atleast contains one uppercase
             if (!password.matches(".*[A-Z].*")) {
                 System.out.println("Password must contain at least one uppercase letter.");
                 isValid = false;
