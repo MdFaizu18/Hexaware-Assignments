@@ -21,6 +21,7 @@ public class PasswordValidation {
                 System.out.println("Password must contain at least one uppercase letter.");
                 isValid = false;
             }
+            // To check atleast one digit is present
             if (!password.matches(".*[0-9].*")) {
                 System.out.println("Password must contain at least one digit.");
                 isValid = false;
@@ -31,7 +32,7 @@ public class PasswordValidation {
                 System.out.println("Password is valid... Thank you for setting up your password.");
                 break;
             }
-            
+            // if not passed the 3 if conditions then it will show this
             System.out.println("Please try again.\n");
         }
         
