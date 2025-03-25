@@ -1,6 +1,8 @@
+-- To create the database
 CREATE DATABASE PayXpert;
 USE PayXpert;
 
+-- To create Employee Table
 CREATE TABLE employee (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
@@ -14,6 +16,7 @@ CREATE TABLE employee (
     joining_date DATE NOT NULL,
     termination_date DATE
 );
+-- To create PayRoll Table
 CREATE TABLE payroll (
     payroll_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT NOT NULL,
@@ -25,6 +28,7 @@ CREATE TABLE payroll (
     net_salary DECIMAL(20,2) NOT NULL DEFAULT 0.00,
     FOREIGN KEY (employee_id) REFERENCES employee(employee_id) ON DELETE CASCADE
 );
+-- To create Taz Table
 CREATE TABLE tax (
     tax_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT NOT NULL,
@@ -33,6 +37,7 @@ CREATE TABLE tax (
     tax_amount DECIMAL(20,2) NOT NULL DEFAULT 0.00,
     FOREIGN KEY (employee_id) REFERENCES employee(employee_id) ON DELETE CASCADE
 );
+-- To create Financial_record Table
 CREATE TABLE financial_record (
     record_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT NOT NULL,
@@ -43,10 +48,7 @@ CREATE TABLE financial_record (
     FOREIGN KEY (employee_id) REFERENCES employee(employee_id) ON DELETE CASCADE
 );
 
+-- Ensuring Tables present
 SHOW TABLES;
-DROP TABLE financial_record;
-DROP TABLE tax;
-DROP TABLE payroll;
-DROP TABLE employee;
 DESC FINANCIAL_RECORD;
 
