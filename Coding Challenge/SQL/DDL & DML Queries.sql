@@ -94,8 +94,3 @@ SELECT * FROM Artworks;
 SELECT * FROM Exhibitions;
 SELECT * FROM ExhibitionArtworks;
 
-DROP TABLE Artists;
-DROP TABLE Categories;
-DROP TABLE Artworks;
-DROP TABLE Exhibitions;
-DROP TABLE ExhibitionArtworks;
