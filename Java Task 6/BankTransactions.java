@@ -8,10 +8,12 @@ public class BankTransactions {
 
         System.out.println("Welcome to Bank Transactions System!");
 
+        // to loop untill user exit
         while (true) {
             System.out.println("\n1. Deposit Money");
             System.out.println("2. Withdraw Money");
             System.out.println("3. Exit and Show Transactions");
+            // to get the user input ( choice )
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
 
