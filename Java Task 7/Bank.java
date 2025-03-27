@@ -5,9 +5,9 @@ public class Bank {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Creating an Account Object
+   
         System.out.println("Welcome to the Bank!");
-
+        // Creating an Account Object
         Account account = new Account(123456, "Savings", 2000.00);
         account.displayAccountDetails();
 
