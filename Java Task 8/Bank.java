@@ -24,10 +24,11 @@ public class Bank {
         // Create Account Based on User Choice
         switch (choice) {
             case 1:
-                // if user choose savings it will use this object as further 
+                // if user choose savings account it will use this object as further 
                 account = new SavingsAccount(accNumber, balance);
                 break;
             case 2:
+                // if user choose current account it will use this object as further 
                 account = new CurrentAccount(accNumber, balance);
                 break;
             default:
@@ -62,6 +63,7 @@ public class Bank {
                     break;
 
                 case 4:
+                    //it will override the calculate interest from the sub class 
                     account.calculate_interest();
                     break;
 
