@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Bank {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // intializing the account class object 
         Account account = null;
 
         System.out.println("Welcome to Hexaware Bank!");
@@ -23,6 +24,7 @@ public class Bank {
         // Create Account Based on User Choice
         switch (choice) {
             case 1:
+                // if user choose savings it will use this object as further 
                 account = new SavingsAccount(accNumber, balance);
                 break;
             case 2:
