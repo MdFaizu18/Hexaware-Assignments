@@ -23,6 +23,7 @@ public class Bank{
           System.out.print("Enter Initial Balance: ");
           double balance = sc.nextDouble();
 
+          // map into the user choice account 
           switch (choice) {
               case 1:
                   account = new SavingsAccount(accNumber,custName,balance);
