@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class BankApp {
     public static void main(String[] args) {
+        // initialzing bank object
         Bank bank = new Bank();
         Scanner scanner = new Scanner(System.in);
 
@@ -81,12 +82,12 @@ public class BankApp {
                     break;
 
                 case "exit":
-                    System.out.println("✅ Thank you for using the banking system!");
+                    System.out.println("Thank you for using the banking system!");
                     scanner.close();
                     return;
 
                 default:
-                    System.out.println("❌ Invalid command! Please enter a valid option.");
+                    System.out.println("Invalid command! Please enter a valid option.");
             }
         }
     }
