@@ -1,4 +1,4 @@
--- To create the database
+-- To create the database for PayXpert
 CREATE DATABASE PayXpert;
 USE PayXpert;
 
