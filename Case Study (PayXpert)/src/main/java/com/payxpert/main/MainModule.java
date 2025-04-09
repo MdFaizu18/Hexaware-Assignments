@@ -31,7 +31,7 @@ public class MainModule {
 
     public static void main(String[] args) {
         boolean exit = false;
-
+        // Main Menu
         while (!exit) {
             System.out.println("\n=== PayXpert Payroll Management System ===");
             System.out.println("1. Employee Management");
@@ -62,6 +62,7 @@ public class MainModule {
         scanner.close();
 
     }
+    // Sub Menu for Employee Management
     private static void employeeManagementSubmenu() throws Exception {
         while (true) {
             System.out.println("\n--- Employee Management ---");
@@ -157,8 +158,7 @@ public class MainModule {
         employeeService.removeEmployee(empId);
         System.out.println("Employee removed successfully.");
     }
-
-
+    // Sub Menu for Payroll Processing
     private static void payrollProcessingSubmenu() throws Exception {
         while (true) {
             System.out.println("\n=== Payroll Processing ===");
@@ -221,9 +221,7 @@ public class MainModule {
         List<Payroll> payrolls = payrollService.getPayrollsForPeriod(startDate,endDate);
         ReportGenerator.generatePayrollReport(payrolls);
     }
-
-
-    // Submenu for Tax Calculation
+    // Sub Menu for Tax Calculation
     private static void taxManagementSubmenu() throws Exception {
         while (true) {
             System.out.println("\n=== Tax Calculation ===");
@@ -287,8 +285,7 @@ public class MainModule {
             System.out.println(taxes);
         }
     }
-
-
+    // Sub Menu for Financial Records
     private static void financialRecordsSubmenu() throws Exception {
         while (true) {
             System.out.println("\n=== Financial Records ===");
@@ -349,7 +346,7 @@ public class MainModule {
         List<FinancialRecord> records = financialRecordService.getFinancialRecordsForDate(date);
         records.forEach(System.out::println);
     }
-
+    // Sub Menu for Financial Reports
     private static void reportGenerationSubmenu() {
         ReportGenerator reportGenerator = new ReportGenerator();
         while (true) {
