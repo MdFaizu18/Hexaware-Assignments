@@ -1,5 +1,6 @@
 CREATE DATABASE loanmanagement;
 use loanmanagement;
+
 -- Create Customer table
 CREATE TABLE Customer (
     customerId INT PRIMARY KEY,
@@ -9,11 +10,6 @@ CREATE TABLE Customer (
     address VARCHAR(255) NOT NULL,
     creditScore INT NOT NULL
 );
-select * from customer;
-select * from loan;
-select * from homeloan;
-select * from customer;
-
 -- Create Loan table
 CREATE TABLE Loan (
     loanId INT PRIMARY KEY,
@@ -25,7 +21,6 @@ CREATE TABLE Loan (
     loanStatus VARCHAR(20) NOT NULL,
     FOREIGN KEY (customerId) REFERENCES Customer(customerId)
 );
-
 -- Create HomeLoan table
 CREATE TABLE HomeLoan (
     loanId INT PRIMARY KEY,
@@ -33,7 +28,6 @@ CREATE TABLE HomeLoan (
     propertyValue INT NOT NULL,
     FOREIGN KEY (loanId) REFERENCES Loan(loanId)
 );
-
 -- Create CarLoan table
 CREATE TABLE CarLoan (
     loanId INT PRIMARY KEY,
@@ -41,3 +35,7 @@ CREATE TABLE CarLoan (
     carValue INT NOT NULL,
     FOREIGN KEY (loanId) REFERENCES Loan(loanId)
     );
+select * from customer;
+select * from loan;
+select * from homeloan;
+select * from customer;
