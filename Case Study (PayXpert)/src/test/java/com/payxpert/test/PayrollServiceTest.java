@@ -51,7 +51,7 @@ class PayrollServiceTest {
 
         double expectedNet = (BASIC_SALARY + OVERTIME) - DEDUCTIONS;
         assertEquals(expectedNet, payroll.getNetSalary(),
-                0.001, // Delta for double comparison
+                0.001, 
                 "Net salary calculation mismatch");
     }
 
@@ -73,7 +73,7 @@ class PayrollServiceTest {
                     deductions[i]
             );
 
-            // Manually compute expected values
+         
             double expectedGross = basicSalaries[i] + overtimePays[i];
             double expectedNet = expectedGross - deductions[i];
 
@@ -81,7 +81,6 @@ class PayrollServiceTest {
             assertEquals(expectedGross, payroll.getBasicSalary() + payroll.getOvertimePay(), 0.001, "Gross salary mismatch");
             assertEquals(expectedNet, payroll.getNetSalary(), 0.001, "Net salary mismatch");
 
-            // Optional: verify it's inserted into DB (integration)
             Payroll persisted = payrollService.getPayrollById(payroll.getPayrollId());
             assertNotNull(persisted, "Persisted payroll should not be null");
             assertEquals(employeeIds[i], persisted.getEmployeeId(), "Employee ID mismatch");
