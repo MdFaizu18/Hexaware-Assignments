@@ -20,10 +20,10 @@ class TaxServiceTest {
 
     @Test
     void VerifyTaxCalculationForHighIncomeEmployee() throws Exception {
-        // Test parameters
+    
         double highTaxableIncome = 250_000.0;
         int currentYear = Year.now().getValue();
-        // Expected calculation:
+        // calculation:
         // First 100,000 @25% = 25,000
         // Next 100,000 @30% = 30,000
         // Remaining 50,000 @35% = 17,500
