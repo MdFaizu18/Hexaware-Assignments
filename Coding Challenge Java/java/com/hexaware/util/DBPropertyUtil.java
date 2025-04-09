@@ -12,7 +12,7 @@ public class DBPropertyUtil {
                 throw new Exception("Properties file not found in classpath: " + propertyFileName);
             }
             prop.load(input);
-            // Assuming properties file has keys: server, database, user, password
+  
             String server = prop.getProperty("db.server");
             String database = prop.getProperty("db.database");
             String user = prop.getProperty("db.username");
